@@ -254,6 +254,7 @@ Assembly.prototype.drawPlot = function(parent_div, longest, circle_span) {
     plot_arc(ccdg, radii.ceg[1]/1.5, radii.ceg[2], p100Scale(this.busco.C), p100Scale(this.busco.C+this.busco.F), 'asm-busco_F');
     plot_arc(ccdg, radii.ceg[1]/1.5, radii.ceg[2], p100Scale(0), p100Scale(this.busco.F), 'asm-busco_F');
     plot_arc(ccdg, radii.ceg[1]/1.5, radii.ceg[2], p100Scale(0), p100Scale(this.busco.D), 'asm-busco_D');
+    plot_arc(ccdg, radii.ceg[1]/1.5, radii.ceg[2], p100Scale(0), p100Scale(this.busco.M), 'asm-busco_M');
     var ccag = ccg.append('g')
       .attr("id", "asm-busco_completeness_axis");
     ccag.append('circle').attr('r', radii.ceg[1]/1.5).attr('class', 'asm-axis');
@@ -465,6 +466,8 @@ Assembly.prototype.drawPlot = function(parent_div, longest, circle_span) {
     key.append('text').attr('x', w + 3).attr('y', w * 2.5 - 1).text('Dup. (' + this.busco.D.toFixed(1) + '%)').attr('class', 'asm-key');
     key.append('rect').attr('y', w * 3).attr('height', w).attr('width', w).attr('class', 'asm-busco_F asm-toggle');
     key.append('text').attr('x', w + 3).attr('y', w * 4 - 1).text('Frag. (' + this.busco.F.toFixed(1) + '%)').attr('class', 'asm-key');
+    key.append('rect').attr('y', w * 4.5).attr('height', w).attr('width', w).attr('class', 'asm-busco_M asm-toggle');
+    key.append('text').attr('x', w + 3).attr('y', w * 5.5 - 1).text('Frag. (' + this.busco.M.toFixed(1) + '%)').attr('class', 'asm-key');
   }
   else if (this.cegma_complete) {
     var lccg = lg.append('g')
