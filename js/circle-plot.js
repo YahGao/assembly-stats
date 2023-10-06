@@ -462,9 +462,9 @@ Assembly.prototype.drawPlot = function(parent_div, longest, circle_span) {
     var key = lccg.append('g').attr('transform', 'translate(' + (size / 2 - 210) + ',' + (-size / 2 + 28) + ')');
     key.append('rect').attr('height', w).attr('width', w).attr('class', 'asm-busco_C asm-toggle');
     key.append('text').attr('x', w + 3).attr('y', w - 1).text('Comp. (' + this.busco.C.toFixed(1) + '%)').attr('class', 'asm-key');
-    key.append('rect').attr('y', w + 14).attr('y', w).attr('width', w).attr('class', 'asm-busco_D asm-toggle');
+    key.append('rect').attr('x', w * 1.5).attr('y', w).attr('width', w).attr('class', 'asm-busco_D asm-toggle');
     key.append('text').attr('x', w).attr('y', w * 2.5 - 1).text('Dup. (' + this.busco.D.toFixed(1) + '%)').attr('class', 'asm-key');
-    key.append('rect').attr('y', w + 16).attr('height', w).attr('width', w).attr('class', 'asm-busco_F asm-toggle');
+    key.append('rect').attr('x', w * 3).attr('height', w).attr('width', w).attr('class', 'asm-busco_F asm-toggle');
     key.append('text').attr('x', w).attr('y', w * 4 - 1).text('Frag. (' + this.busco.F.toFixed(1) + '%)').attr('class', 'asm-key');
     key.append('rect').attr('y', w + 17).attr('height', w).attr('width', w).attr('class', 'asm-busco_M asm-toggle');
     key.append('text').attr('x', w).attr('y', w * 5.5 - 1).text('Miss. (' + this.busco.M.toFixed(1) + '%)').attr('class', 'asm-key');
