@@ -252,7 +252,7 @@ Assembly.prototype.drawPlot = function(parent_div, longest, circle_span) {
     var ccdg = ccg.append('g')
       .attr("id", "asm-busco_completeness_data");
     plot_arc(ccdg, radii.ceg[1]/1.5, radii.ceg[2], p100Scale(this.busco.C), p100Scale(this.busco.C+this.busco.F), 'asm-busco_F');
-    plot_arc(ccdg, radii.ceg[1]/1.5, radii.ceg[2], p100Scale(0), p100Scale(this.busco.M), 'asm-busco_M');
+    plot_arc(ccdg, radii.ceg[1]/1.5, radii.ceg[2], p100Scale(0), p100Scale(this.busco.F), 'asm-busco_F');
     plot_arc(ccdg, radii.ceg[1]/1.5, radii.ceg[2], p100Scale(0), p100Scale(this.busco.D), 'asm-busco_D');
     var ccag = ccg.append('g')
       .attr("id", "asm-busco_completeness_axis");
